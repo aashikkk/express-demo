@@ -5,8 +5,8 @@ import morgan from "morgan";
 import dotenv from "dotenv";
 import logger from "./middleware/logger.js";
 import authenticate from "./auth.js";
-import courses from "./routes/courses.js";
-import home from "./routes/home.js";
+import coursesRouter from "./routes/courses.js";
+import homeRouter from "./routes/home.js";
 
 const startupDebugger = debug("app:startup");
 const dbDebugger = debug("app:db");
@@ -24,8 +24,8 @@ app.use(express.static("public")); // to serve static files
 
 app.use(helmet());
 
-app.use("/api/courses", courses);
-app.use("/", home);
+app.use("/api/courses", coursesRouter);
+app.use("/", homeRouter);
 
 if (app.get("env") === "development") {
     app.use(morgan("tiny"));
