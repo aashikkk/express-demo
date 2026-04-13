@@ -1,0 +1,22 @@
+{
+    "name": "express-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "debug": "^4.4.3",
+        "dotenv": "^17.4.1",
+        "express": "^5.2.1",
+        "helmet": "^8.1.0",
+        "joi": "^18.1.2",
+        "morgan": "^1.10.1",
+        "pug": "^3.0.4"
+    }
+}
